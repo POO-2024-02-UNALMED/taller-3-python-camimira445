@@ -71,22 +71,22 @@ class TV:
     def setControl(self, control) :
         self._control = control
    
-    def set_precio(self,precio):
+    def setPrecio(self,precio):
         self._precio=precio
     def setVolumen(self, volumen) :
         if self._estado and 0 <= volumen <= 7:
             self._volumen = volumen
 
-    def get_volumen(self):
+    def getVolumen(self):
         return self._volumen
     
-    def set_volumen(self,volumen):
+    def setVolumen(self,volumen):
         self._volumen=volumen
 
-    def get_Control(self):
+    def getControl(self):
         return self._Control
     
-    def set_Control(self,control):
+    def setControl(self,control):
       self._control=control
 
     def setCanal(self, canal) :
