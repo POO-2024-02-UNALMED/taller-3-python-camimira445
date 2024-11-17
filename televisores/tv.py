@@ -3,7 +3,7 @@ class TV:
     _numTV=0
 
     def __init__(self, marca,estado=False):
-        self._Marca=marca
+        self._marca=marca
         self._estado=estado
         self._canal=1
         self._volumen=1
@@ -42,7 +42,9 @@ class TV:
          self._volumen -=1
 
     def getMmarca(self):
-        return self._Marca
+        return self._marca
+    def setMarca(self, marca) :
+        self._marca = marca
     
     def getCanal(self):
         return self._canal
