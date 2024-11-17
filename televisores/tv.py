@@ -66,13 +66,15 @@ class TV:
         self.setCanal(self._canal + 1)
 
     def canalDown(self) :
-        self.setCanal(self._canal - 1)
+        if self._canal>1:
+          self.setCanal(self._canal - 1)
 
     def volumenUp(self) :
         self.setVolumen(self._volumen + 1)
 
     def volumenDown(self):
-        self.setVolumen(self._volumen - 1)
+        if self._volumen>0:
+          self.setVolumen(self._volumen - 1)
 
     
 
