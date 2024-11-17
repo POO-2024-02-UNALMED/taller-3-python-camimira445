@@ -88,11 +88,9 @@ class TV:
     def setControl(self,control):
       self._control=control
 
-    def setCanal(self, canal) :
-            self.canalUp()
-            self.canalDown()
+    def setCanal(self, canal):
+        if 1 <= canal <= 120:
             self._canal = canal
-
     
     
 
