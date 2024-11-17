@@ -8,7 +8,6 @@ class TV:
         self._canal=1
         self._volumen=1
         self._precio=500
-        self._Control=None
 
         TV._numTV +=1
 
@@ -24,8 +23,8 @@ class TV:
         self._estado=True
 
     def turnOff(self):
-        self._estado=False
-    
+        self._estado = False
+
     def canalUp(self):
         if (self.estado==True and 1<=self._canal<=120):
             self._canal +=1
@@ -90,7 +89,8 @@ class TV:
       self._control=control
 
     def setCanal(self, canal) :
-        if self._estado and 1 <= canal <= 120:
+            self.canalUp()
+            self.canalDown()
             self._canal = canal
 
     
