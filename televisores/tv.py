@@ -2,7 +2,7 @@ class TV:
 
     _numTV=0
 
-    def __init__(self, marca: Marca,estado:bool):
+    def __init__(self, marca,estado=False):
         self._marca=marca
         self._estado=estado
         self._canal=1
@@ -13,11 +13,11 @@ class TV:
         TV._numTV +=1
 
     @classmethod
-    def getnumTV(cls)-> int :
+    def getnumTV(cls):
         return cls._numTV
     
     @classmethod
-    def setnumTV(cls,numTV:int):
+    def setnumTV(cls,numTV):
         cls._numTV=numTV
 
     def turnOn(self):
@@ -27,36 +27,35 @@ class TV:
         self._estado=False
     
     def canalUp(self):
-        if (self._canal>=1 and self._canal<=120 and self._estado==True):
+        if (self.estado==True and 1<=self._canal<=120):
             self._canal +=1
 
     def canalDown(self):
-         if (self._canal>=1 and self._canal<=120 and self._estado==True):
+        if (self.estado==True and 1<=self._canal<=120):
             self._canal -=1
     def volumenUp(self):
-        if (self._volumen>=0 and self._volumen<=7 and self._estado==True):
+        if (self._estado==True and  0<=self._volumen<=7):
             self._volumen +=1
 
     def volumenDown(self):
-         if (self._volumen>=0 and self._volumen<=7 and self._estado==True):
-            self._volumen -=1
+        if (self._estado==True and  0<=self._volumen<=7):
+         self._volumen -=1
 
-   
-    def getMmarca(self)-> Marca :
+    def getMmarca(self):
         return self._marca
     
-    def getCanal(self)->int:
+    def getCanal(self):
         return self._canal
     
-    def getPrecio(self)->int:
+    def getPrecio(self):
         return self._precio
     
-    def getVolumen(self)->int:
+    def getVolumen(self):
         return self._volumen
     
-    def getControl(self)->Control:
+    def getControl(self):
         return self._Control
-    def getEstado(self) -> bool:
+    def getEstado(self) :
         return self._estado
     
     def selfCanal(self,marca):
@@ -86,16 +85,13 @@ class TV:
       self._control=control
 
     
-
-    
-
     def volumenUp(self):
-        if (self._volumen>=0 and self._volumen<=7 and self._estado==True):
+        if (self._estado==True and  0<=self._volumen<=7):
             self._volumen +=1
 
     def volumenDown(self):
-         if (self._volumen>=0 and self._volumen<=7 and self._estado==True):
-            self._volumen -=1
+        if (self._estado==True and  0<=self._volumen<=7):
+         self._volumen -=1
 
     
     

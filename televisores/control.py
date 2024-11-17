@@ -24,14 +24,14 @@ class Control:
     def volumenDown(self):
         self._tv.canalDown()
 
-    def setCanal(self, canal: int) :
+    def setCanal(self, canal) :
         self._tv.setCanal(canal)
 
-    def setVolumen(self, volumen: int):
+    def setVolumen(self, volumen):
         self._tv.setVolumen(volumen)
 
     def gettv(self):
         return self._tv
 
-    def settv(self, tv:TV):
+    def settv(self, tv):
         self._tv = tv
