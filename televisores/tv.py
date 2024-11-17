@@ -40,53 +40,38 @@ class TV:
         if (self._estado==True and  0<=self._volumen<=7):
          self._volumen -=1
 
-    def getMmarca(self):
+    def getMarca(self):
         return self._marca
+    
     def setMarca(self, marca) :
         self._marca = marca
-    
-    def getCanal(self):
-        return self._canal
-    
+
     def getPrecio(self):
         return self._precio
     
-    def getVolumen(self):
-        return self._volumen
-    
-    def getControl(self):
-        return self._Control
-    def getEstado(self) :
-        return self._estado
-    
-    def selfCanal(self,marca):
-        self._marca=marca
-
-    def getCanal(self):
-        return self._canal
-    
-    def selfNombre(self,canal):
-        self._canal=canal
-    def setControl(self, control) :
-        self._control = control
-   
     def setPrecio(self,precio):
         self._precio=precio
+    
+    def getVolumen(self):
+        return self._volumen
     def setVolumen(self, volumen) :
         if self._estado and 0 <= volumen <= 7:
             self._volumen = volumen
-
-    def getVolumen(self):
-        return self._volumen
     
-    def setVolumen(self,volumen):
-        self._volumen=volumen
-
     def getControl(self):
         return self._Control
     
     def setControl(self,control):
       self._control=control
+    
+    def setControl(self, control) :
+        self._control = control
+
+    def getEstado(self) :
+        return self._estado
+
+    def getCanal(self):
+        return self._canal
 
     def setCanal(self, canal):
         if 1 <= canal <= 120:
