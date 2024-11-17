@@ -1,9 +1,9 @@
 class Control:
     def __init__(self):
-        self.__tv = None
+        self._tv = None
 
     def enlazar(self, tv):
-        self.__tv = tv
+        self._tv = tv
         tv.setControl(self)
 
     def turnOn(self):
